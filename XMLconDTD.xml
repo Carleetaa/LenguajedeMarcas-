@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- DIRECCION DE ENTREGA DEL PEDIDO. CLAVE E INDEPENDIENTE DEL RESTO DE  VARIABLES.-->
+<!DOCTYPE address SYSTEM "vocabulario.dtd">
+<Pedidos>
+<Sucursales CodigoPedido="A234567">
+	<DireccionEntrega>C/ Luis de Medina, nº 5, Puerta 1, 28805, Alcalá de Henares, Madrid.</DireccionEntrega>
+	<NombreTrabajador>Carla García Parra</NombreTrabajador>
+	<FechaPedido>2021/02/14</FechaPedido>
+	<ObservacionesPedido>Urgente</ObservacionesPedido>
+	<PlazoRevision>8 días</PlazoRevision>
+	<Articulos CodigoArt="ABC-123">
+		<UnidadesPedidas>5</UnidadesPedidas>
+		<PrecioUnidad>100 €/Unidad</PrecioUnidad>
+		<ObservacionesArt>Entrega 2 días después </ObservacionesArt>
+	</Articulos>
+	<Articulos CodigoArt="BCD-234">
+		<UnidadesPedidas>50</UnidadesPedidas>
+		<PrecioUnidad>100 €/Unidad</PrecioUnidad>
+		<ObservacionesArt></ObservacionesArt>
+	</Articulos>
+</Sucursales>
+<Sucursales CodigoPedido="B7654321">
+	<DireccionEntrega>Avenida Angel Sallent, 145, 08224, Tarrassa, Barcelona.</DireccionEntrega>
+	<NombreTrabajador>Daniel González</NombreTrabajador>
+	<FechaPedido>2021/04/10</FechaPedido>
+	<ObservacionesPedido></ObservacionesPedido>
+	<PlazoRevision>20 días</PlazoRevision>
+	<Articulos CodigoArt="BCA-231">
+		<UnidadesPedidas>400</UnidadesPedidas>
+		<PrecioUnidad>2€/Unidad</PrecioUnidad>
+		<ObservacionesArt></ObservacionesArt>
+	</Articulos>
+</Sucursales>
+</Pedidos>

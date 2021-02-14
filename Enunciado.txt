@@ -1,0 +1,22 @@
+La empresa "ASIR SA" tiene sucursales en toda España. Su sede central, al igual que el almacén de donde se surten todas las sucursales se encuentra en Madrid.
+Cada sucursal consta de una zona de exposición y otra de gestión que no siempre tienen la misma ubicación.
+Cuando se hace un pedido al almacén de la central las sucursales reciben los artículos en el departamento de exposición y el albarán y el pago se remiten al departamento de gestión.
+Sabiendo que en cada pedido la información que tiene que haber, además de los datos de la sucursal que realiza el pedido y sus direcciones para los envíos correspondientes, (en el caso de que ambas coincidan solo aparece una), hay que reflejar los siguientes datos:
+
+Código del pedido, que está formado por una cadena de 8 caracteres de los cuales el primero es una letra.
+Nombre del trabajador que realiza el pedido.
+Fecha del pedido.
+Observaciones sobre el pedido, cuyos valores son, en caso de que exista el dato: urgente o incompleto.
+Plazo de revisión de los productos recibidos que será un intervalo de tiempo expresado en días y dependerá del precio final del pedido.
+Respecto a los artículos de los que se hace el pedido hay que guardar, para cada uno de ellos:
+
+        Código del artículo, formado por tres letras mayúsculas y tres dígitos separados por un guión. Es la referencia que tiene que dar el ordenante a la sede en caso de devolución de algún artículo.
+        Número de unidades pedidas.
+        Precio de cada unidad.
+        Observaciones del artículo.
+
+Construir:
+        El vocabulario para el documento XML que utiliza esta empresa para gestionar los pedidos utilizando un DTD externo.
+        Ese mismo vocabulario utilizando el lenguaje XMLSchema debidamente documentado con fecha de creación, nombre del autor y utilidad del esquema.
+        Realizar un fichero XML que se corresponda con una instancia del vocabulario diseñado y asociarle al DTD.
+        Modificar ese fichero XML para asociarle al esquema diseñado.

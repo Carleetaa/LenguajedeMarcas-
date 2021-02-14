@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Pedidos xmlns: xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:noNamespaceShemaLocation="pedido.xsd">
+<Pedidos>
+<Sucursales CodigoPedido="A234567">
+            <DireccionEntrega>C/Luis de Medina, nº 1 2, 28805, Alcalá de Henares, Madrid.</DireccionEntrega>
+            <NombreTrabajador>Carla García Parra.</NombreTrabajador>
+            <FechaPedido>2021/02/14</FechaPedido>
+            <ObservacionesPedido>Urgente</ObservacionesPedido>
+            <PlazoRevision>6 días</PlazoRevision>
+            <Articulos CodigoArt="ABC-123">
+            <UnidadesPedidas>7</UnidadesPedidas>
+            <PrecioUnidad>100 €/Unidad</PrecioUnidad>
+            <ObservacionesArt>Entrega 1 día más tarde</ObservacionesArt>
+	</Articulos>
+	<Articulos CodigoArt="BCD-234">
+            <UnidadesPedidas>50</UnidadesPedidas>
+            <PrecioUnidad>100 €/Unidad</PrecioUnidad>
+            <ObservacionesArt></ObservacionesArt>
+	</Articulos>
+</Sucursales>
+<Sucursales CodigoPedido="B7654321">
+          <DireccionEntrega>Avenida Angel Sallent.</DireccionEntrega>
+          <NombreTrabajador>Dniel González González</NombreTrabajador>
+          <FechaPedido>2021/02/16</FechaPedido>
+          <ObservacionesPedido></ObservacionesPedido>
+          <PlazoRevision>15 días</PlazoRevision>
+	<Articulos CodigoArt="BCA-231">
+          <UnidadesPedidas>400</UnidadesPedidas>
+          <PrecioUnidad>2€/Unidad</PrecioUnidad>
+          <ObservacionesArt></ObservacionesArt>
+	</Articulos>
+</Sucursales>
+</Pedidos>
+</EmpresaDistanza>

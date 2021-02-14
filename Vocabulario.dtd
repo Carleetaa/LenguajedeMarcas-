@@ -1,0 +1,17 @@
+<!DOCTYPE Pedido[
+	<!ELEMENT Pedidos (Sucursales+)>
+	<!ELEMENT Sucursales (DirEntrega+, NombreTrabajador, FechaPedido, ObservacionesPedido?, PlazoRevision)>
+	<!ATTLIST Sucursales CodigoPedido CDATA #REQUIRED>
+	<!ELEMENT DirEntrega (#PCDATA)>
+	<!ELEMENT NombreTrabajador (#PCDATA)>
+	<!ELEMENT FechaPedido (#PCDATA)>
+	<!ELEMENT ObservavionesPedido (#PCDATA)>
+	<!ELEMENT PlazoRevision (#PCDATA)>
+
+	<!ELEMENT Articulos (UnidadesPedidas, PrecioUnidad, ObservacionesArt)>
+	<!ATTLIST Articulos CodigoArt CDATA #REQUIRED>
+	<!ELEMENT UnidadesPedidas (#PCDATA)>
+	<!ELEMENT PrecioUnidad (#PCDATA)>
+	<!ELEMENT ObservacionesArt (#PCDATA)>
+
+]> 

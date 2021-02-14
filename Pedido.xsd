@@ -1,0 +1,81 @@
+﻿<?xml version = "1.0" encoding = "UTF-8"?>
+<xsd : Schema xmlns: xsd = "http://www.w3.org//XMLSchema">
+
+	<xsd:annotation>
+		<xsd: documentation xml: lang="ES-es">
+			PEDIDO DE LA EMPRESA ASIR SA.
+				<fecha>2021/02/14</fecha>
+				<autor>Carla García Parra</autor>
+		</xsd: documentation> 
+	</xsd: annotation> 
+
+
+	<!-- DATOS PEDIDOS.-->
+
+	<xsd: element name ="Pedidos" type="DatosPedido"/>
+	</xsd: complexType name="DatosPedido">
+		<!-- SEQUENCE: ESPECIFICA QUE LOS ELEMENTOS SECUNDARIOS DEBEN APARECER EN UN ORDEN ESPECIFICO. -->
+		<xsd: sequence> 
+
+				<!-- MINOCCURS & MAXOCCURS: DEFINE LA FRECUENCIA CON LA QUE UN ELEMENTO PUEDE OCURRIR. MINOCCURS PUEDE APARECER 0 VECES Y MAXOCCURS DE FORMA ILIMITADA.-->
+				<xsd: element name ="Sucursales" type="DatosSucursales" minOccurs="0" maxOccurs="unbounded" /> 
+		</xsd: sequence>
+	</xsd: complexType>
+	
+
+	<!-- DATOS SUCURSAL -->
+	
+	<xsd: complexType name = "DatosSucursales"
+		<xsd: sequence>
+			<xsd: element name="DirEntrega" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd: element name="NombreTrabajador" type="xsd:string" />
+			<xsd: element name="FechaPedido" type="xsd:date"/>
+			<!-- Observaciones sobre el pedido URGENTE o INCOMPLETO. -->
+			<xsd: element name ="ObservacionesPedido">
+			</xsd: element>	
+			<xsd: element name = "PlazoRevision">
+				<xsd: simpleType>
+					<xsd: restriction base="xsd:positiveInteger"
+						<xsd: minInclusive values ="1"/>
+					</xsd: restriction>
+				</xsd: simpleType>
+			</xsd: element>
+			
+	<!--  DATOS ARTICULOS.-->
+	
+		<xsd: element name ="Articulos" type="DatosArt" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd: sequence>
+				<xsd: attribute name="CodigoPedido" type="TipoCodigo" use="required"/>
+	</xsd:complexType>
+		<xsd:simpleType name ="TipoCodigo">
+			<xsd: restriction base ="xsd:string">
+				<xsd:pattern value="[A-Za-z]([A-Za-z0-9]{7})"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	<xsd:complexType name ="DatosArt"
+			<xsd:sequence>
+				<xsd:element name ="UnidadesPedidas">
+					<xsd:simpleType>
+						<xsd:restriction base= "xsd:positiveInteger">
+							<xsd:minInclusive value="1"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd: element name="PrecioUnidad"
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:decimal">
+							<xsd:minInclusive value="1"/>
+						</xsd:restriction>
+					</xsd:simpletype>
+				</xsd:element>
+				<xsd:element name="ObservacionesArt" type="xsd:string"/>
+			</xsd:sequence>
+		<xsd:attribute name="ObservacionesArt" type="xsd:string"/>
+	</xsd:complexType>
+		<xsd:simpletype name="CodigoArt">
+			<xsd:restriction base="xsd:string">
+				<xsd:pattern value="[A-Z]{3}-[0-9]{3}"/>
+			</xsd:restriction>
+		</xsd:simpletype>
+</xsd:Schema>
+
